@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" immediate="true" name="org.topo.app.AppComponent" activate="activate" deactivate="deactivate">
+    <implementation class="org.topo.app.AppComponent"/>
+    <service servicefactory="false">
+        <provide interface="org.topo.app.MyService"/>
+    </service>
+    <property name="service.pid" value="org.topo.app.AppComponent"/>
+    <reference name="topology" interface="org.onosproject.net.topology.TopologyStore" cardinality="1..1" policy="static" bind="bindTopology" unbind="unbindTopology"/>
+    <reference name="coreService" interface="org.onosproject.core.CoreService" cardinality="1..1" policy="static" bind="bindCoreService" unbind="unbindCoreService"/>
+</scr:component>

@@ -1,0 +1,25 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1466145804950
+Build-Jdk: 1.8.0_91
+Built-By: root
+Bundle-Blueprint: OSGI-INF/blueprint/shell-config.xml
+Bundle-Description: ONOS OSGi bundle archetype
+Bundle-ManifestVersion: 2
+Bundle-Name: topo-app
+Bundle-SymbolicName: org.topo.app
+Bundle-Version: 1.0.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Export-Package: org.topo.app.cli;uses:="org.apache.karaf.shell.commands,
+ org.onosproject.cli";version="1.0.0",org.topo.app;uses:="org.onosprojec
+ t.core,org.onosproject.net.topology";version="1.0.0"
+Import-Package: org.apache.karaf.shell.commands;version="[3.0,4)",org.on
+ lab.packet;version="[1.7,2)",org.onosproject.cli;version="[1.7,2)",org.
+ onosproject.core;version="[1.7,2)",org.onosproject.net;version="[1.7,2)
+ ",org.onosproject.net.device;version="[1.7,2)",org.onosproject.net.flow
+ ;version="[1.7,2)",org.onosproject.net.host;version="[1.7,2)",org.onosp
+ roject.net.statistic;version="[1.7,2)",org.onosproject.net.topology;ver
+ sion="[1.7,2)",org.osgi.service.blueprint;version="[1.0.0,2.0.0)",org.s
+ lf4j;version="[1.6,2)"
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Service-Component: OSGI-INF/org.topo.app.AppComponent.xml
+Tool: Bnd-3.0.0.201509101326
